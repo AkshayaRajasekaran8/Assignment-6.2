@@ -1,0 +1,77 @@
+1. Why MapReduce program is needed in Pig Programming?
+
+     *MapReduce program is needed if the job requires the optimization at particular stage of processing.
+     *It is required when  the job has some tricky usage of cross products,distributed cache, 
+      joins.
+    *Hadoop developers should use MapReduce when good amount of testability is required
+     for combining lots of large data sets  
+    *It is required when the hadoop developers need a definite driver program control .
+
+
+2. What are advantages of Pig over MapReduce?
+
+     *Pig provides higher level of abstraction whereas mapreduce provides low 
+      level of abstraction.
+     *The lines of code in Pig is less compared to mapreduce.
+     *Pig requires less development effort when compared to mapreduce.
+     *Developers need not worry about the version mismatch for executing jobs when 
+       Pig is being used.
+
+
+3. What is Pig engine and what is its importance?
+
+   Pig Engine:
+     *Pig engine enables developers to create the query execution routines for the
+       process of analyzing distributed and large datasets.
+     *The parts of Pig are compiler and scripting language known as Pig Latin.
+     * Pig is a data flow language that processes parallel on hadoop.
+ Importance of Pig:
+      *Pig engine acts as an interpreter between Mapreduce jobs and Pig latin script.
+      *It creates an encironment to execute the Pig scripts into series of mapreduce
+        jobs parallely.
+      *Pig does the work of parsing,executing the Pig scripts.
+
+
+4. What are the modes of Pig execution?
+      The Pig execution modes are:
+      *Local Mode:
+          a.All the files are installed and run from the local file system and local host.
+          b.For testing purpose this mode is used. Hadoop or HDFS is not needed.
+      *MapReduce Mode:
+          a.In MapReduce mode we process or load the data that exists in HDFS using Pig.
+          b.Whenever we execute the Pig Latin statements to process data, a MapReduce from
+              the back-end to perform a particular operation on data that exists in HDFS.        
+
+
+5. What is Grunt Shell in Pig?     
+    
+     *The Grunt Shell of Pig is mainly used to write Pig Latin Scripts. 
+     *It is used to run the Pig in the shell after invoking the Grunt Shell.
+      *There are also useful shell and utility commands provided by the grunt shell.
+     *Grunt can be used interactive shell as well as in batch mode.The supported commands
+       of Grunt  includes DFS commands, pig commands as well as a  others.
+
+
+6. What are the features of Pig Latin language?
+
+     *Pig Latin language provides all of the standard data-processing operations.
+     *It is case sensitive.
+     *It is extensible.We can create our own functions for doing special processing
+     *Ease of Programming:Complex tasks with multiple interrelated data transformations are
+      explicitly encoded as data flow sequences,thus  making them easy to write, understand, and maintain.
+    *It has Optimization Oppurtunities.The way of task encoding permits the system to optimize the
+     execution automatically and thus enables the user to focus on semantics.
+
+
+7. Is Pig Latin commands case sensitive?
+
+    *Pig Latin commands are not case sensitive.
+    *Example: load is equivalent to LOAD. a=load 'aaa'; is not equivalent to
+      A=load 'aaa';
+    *UDF names are case sensitive.Example: MAX is not the same as max.
+
+
+8. What is a dataflow language?
+ 
+     * Data flow language is a programming language that models a program as Directed graph of the data
+       flowing between the operations and thus implementing the dataflow principles and architecture.
